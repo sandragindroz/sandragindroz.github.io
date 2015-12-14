@@ -16,13 +16,17 @@ dl, dd, ol, ul, figure {
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: $text-color;
-    background-color: $background-color;
+    background: url(../assets/img/background.png) repeat;
+    /* background-color: $background-color; */
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
     -o-font-feature-settings: "kern" 1;
     font-feature-settings: "kern" 1;
     font-kerning: normal;
+    margin: 0;
+    padding: 0;
+
 }
 
 
@@ -48,7 +52,6 @@ img {
 }
 
 
-
 /**
  * Figures
  */
@@ -72,7 +75,7 @@ ul, ol {
 li {
     > ul,
     > ol {
-         margin-bottom: 0;
+        margin-bottom: 0;
     }
 }
 
@@ -95,12 +98,12 @@ a {
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: $color-font;
     }
 
     &:hover {
-        color: $text-color;
-        text-decoration: underline;
+        color: $color-font;
+        text-decoration: none;
     }
 }
 

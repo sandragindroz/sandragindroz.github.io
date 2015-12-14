@@ -3,7 +3,6 @@
  */
 .site-header {
     border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
 
     // Positioning context for the mobile navigation icon
@@ -24,9 +23,81 @@
     }
 }
 
+.site-title img{
+    max-width: 80%;
+}
+
+
+hr{
+    margin-top: 12px !important;
+    margin-bottom: 6px !important;
+}
+
+.img-responsive{
+    margin: 30px 0;
+}
+/**
+ * Menu
+ */
+
+#menu a{
+    margin-left: 5px;
+}
+
+#facebook{
+    height: 48px;
+    width: 48px;
+    background: url(../assets/img/facebook.png) no-repeat;
+    display:inline-block;
+    float: left;
+}
+
+#facebook:hover{
+    height: 48px;
+    width: 48px;
+    background: url(../assets/img/facebookhover.png) no-repeat;
+    display:inline-block;
+    float: left;
+}
+
+#site{
+    height: 48px;
+    width: 48px;
+    background: url(../assets/img/site.png) no-repeat;
+    display:inline-block;
+    float: left;
+}
+
+#site:hover{
+    height: 48px;
+    width: 48px;
+    background: url(../assets/img/sitehover.png) no-repeat;
+    display:inline-block;
+    float: left;
+}
+
+@include media-query($on-palm) {
+    #facebook{
+        height: 48px;
+        width: 48px;
+        background: url(../assets/img/facebookhover.png) no-repeat;
+        display:inline-block;
+        float: left;
+    }
+    #site{
+        height: 48px;
+        width: 48px;
+        background: url(../assets/img/sitehover.png) no-repeat;
+        display:inline-block;
+        float: left;
+    }
+}
+
+
 .site-nav {
     float: right;
     line-height: 56px;
+    margin-top:15px;
 
     .menu-icon {
         display: none;
@@ -50,6 +121,7 @@
         border: 1px solid $grey-color-light;
         border-radius: 5px;
         text-align: right;
+        padding-bottom: 10px;
 
         .menu-icon {
             display: block;
@@ -92,13 +164,17 @@
     }
 }
 
-
+.col-md-4{
+    background-color: $background-color-post ;
+    padding: 15px;
+    margin: 10px;
+    width: 31% !important;
+}
 
 /**
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
 }
 
@@ -169,10 +245,23 @@
  */
 .page-content {
     padding: $spacing-unit 0;
+    background: url(../assets/img/city.png) no-repeat;
+    background-size:contain;
+    background-position: bottom right;
+    min-height: 990px;
+    position: bottom;
+
+
+
 }
 
+
 .page-heading {
-    font-size: 20px;
+    font-size: 44px;
+    font-family: $title-font-post;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
 }
 
 .post-list {
@@ -181,26 +270,52 @@
 
     > li {
         margin-bottom: $spacing-unit;
+        background-color: #fff;
+        opacity: 0.7;
+        padding: 15px;
     }
 }
 
 .post-meta {
     font-size: $small-font-size;
     color: $grey-color;
+    text-align: right;
+    display: block;
 }
 
 .post-link {
+    font-family: $title-font-post;
+    color: $color-font;
     display: block;
-    font-size: 24px;
+    font-size: 20px;
+    text-transform: uppercase;
+
+    :hover{
+        text-decoration: none;
+    }
 }
 
+/**
+* Link
+*/
 
+a:focus, a:hover {
+    color: #000 !important;
+    text-decoration: none !important;
+}
 
 /**
  * Posts
  */
+
+article{
+    background-color: $background-color-post;
+    padding: 10px 25px;
+}
+
+
 .post-header {
-    margin-bottom: $spacing-unit;
+    
 }
 
 .post-title {
@@ -215,6 +330,7 @@
 
 .post-content {
     margin-bottom: $spacing-unit;
+
 
     h2 {
         font-size: 32px;
